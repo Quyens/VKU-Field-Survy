@@ -44,6 +44,7 @@ function pwaPrecachePlugin() {
 }
 
 export default defineConfig({
+  base: './',
   plugins: [
     basicSsl(),
     pwaPrecachePlugin(),
