@@ -154,8 +154,8 @@ git commit -m "feat: complete VKU Field Survey PWA & Capacitor iOS offline-first
 # 3. Đặt nhánh chính là main
 git branch -M main
 
-# 4. Thêm địa chỉ kho lưu trữ từ xa (thay thế bằng URL GitHub của bạn)
-git remote add origin https://github.com/<tai-khoan-cua-ban>/<ten-repo>.git
+# 4. Thêm địa chỉ kho lưu trữ từ xa
+git remote add origin https://github.com/Quyens/VKU-Field-Survy.git
 
 # 5. Đẩy mã nguồn lên nhánh main
 git push -u origin main
