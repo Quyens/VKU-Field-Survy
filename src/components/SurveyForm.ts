@@ -201,12 +201,12 @@ export class SurveyFormComponent {
             <div class="vku-grid-2">
               <div class="vku-form-group">
                 <label for="f-inspector-name" class="vku-label">Họ và tên cán bộ / Sinh viên <span class="req">*</span></label>
-                <input type="text" id="f-inspector-name" class="vku-input" placeholder="VD: Nguyễn Văn Quyền" required />
+                <input type="text" id="f-inspector-name" class="vku-input" placeholder="VD: Hoàng Văn Quyến" required />
               </div>
 
               <div class="vku-form-group">
                 <label for="f-inspector-email" class="vku-label">Email công vụ VKU (@vku.udn.vn) <span class="req">*</span></label>
-                <input type="email" id="f-inspector-email" class="vku-input" placeholder="VD: quyennv@vku.udn.vn" required />
+                <input type="email" id="f-inspector-email" class="vku-input" placeholder="VD: quyenhv@vku.udn.vn" required />
               </div>
             </div>
           </div>
