@@ -1,7 +1,8 @@
 # 🏛️ VKU Field Survey - Hệ Thống Khảo Sát Thực Địa & Thu Thập Dữ Liệu Ngoại Tuyến
 
 > **Dự án nhỏ 1: Khảo sát thực địa VKU - Thu thập dữ liệu ngoại tuyến (PWA & Capacitor iOS)**  
-> **Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (VKU) - Đại học Đà Nẵng**
+> **Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (VKU) - Đại học Đà Nẵng**  
+> 🌐 **Trải nghiệm trực tiếp (PWA iOS & Web)**: [https://quyens.github.io/VKU-Field-Survy/](https://quyens.github.io/VKU-Field-Survy/)
 
 ---
 
