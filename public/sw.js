@@ -10,17 +10,21 @@ const PRECACHE_ASSETS = [
   './icons/icon-512.svg',
 ];
 
-// Install Event: Precache App Shell
+// Install Event: Precache App Shell with resilience
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches
       .open(CACHE_NAME)
-      .then((cache) => {
+      .then(async (cache) => {
         console.log('[SW] Precaching App Shell for VKU Survey');
-        return cache.addAll(PRECACHE_ASSETS);
+        await Promise.allSettled(
+          PRECACHE_ASSETS.map((asset) =>
+            cache.add(asset).catch((err) => console.warn('[SW] Precache skipped:', asset, err))
+          )
+        );
       })
       .then(() => self.skipWaiting())
-      .catch((err) => console.error('[SW] Precache failed:', err))
+      .catch((err) => console.error('[SW] Precache error:', err))
   );
 });
 
@@ -52,8 +56,13 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Handle cross-origin or external APIs with network-first
   const url = new URL(request.url);
+
+  // Bypass Vite development client / HMR requests
+  if (url.pathname.startsWith('/@') || url.pathname.includes('?import')) {
+    return;
+  }
+
   const isSameOrigin = url.origin === self.location.origin;
 
   event.respondWith(
